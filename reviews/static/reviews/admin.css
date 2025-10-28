@@ -1,0 +1,22 @@
+:root {
+  --launchlab-primary: #8b5cf6; /* Violet */
+  --launchlab-accent: #06b6d4; /* Cyan */
+}
+
+#header {
+  background: linear-gradient(90deg, var(--launchlab-primary), var(--launchlab-accent));
+}
+
+.module caption {
+  background: linear-gradient(90deg, var(--launchlab-primary), var(--launchlab-accent));
+  color: white;
+  font-weight: bold;
+}
+.status-badge {
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  color: white;
+  font-size: 0.75em;
+  font-weight: bold;
+}
