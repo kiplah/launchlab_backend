@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
     'reviews',
 ]
 
@@ -71,6 +72,7 @@ JAZZMIN_UI_TWEAKS = {
 
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  # 👈 must be at the top
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -79,6 +81,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'launchlab.urls'
 
@@ -151,3 +154,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOW_ALL_ORIGINS = True  # for testing purposes
+# CORS_ALLOWED_ORIGINS = ["http://localhost:5173", "https://launchlab-site.vercel.app"]
