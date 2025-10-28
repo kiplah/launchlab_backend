@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +41,33 @@ INSTALLED_APPS = [
     'rest_framework',
     'reviews',
 ]
+
+JAZZMIN_SETTINGS = {
+    "site_title": "LaunchLab Admin",
+    "site_header": "LaunchLab Dashboard",
+    "site_brand": "LaunchLab",
+    "welcome_sign": "Welcome to LaunchLab Admin Panel",
+    "copyright": "LaunchLab © 2025",
+    "show_sidebar": True,
+    "navigation_expanded": True,
+
+    # Custom icons (FontAwesome)
+    "icons": {
+        "auth": "fas fa-users-cog",
+        "reviews.Review": "fas fa-star",
+    },
+
+    # Colors and theme
+    "theme": "cosmo",  # Other options: simplex, flatly, cyborg, darkly, etc.
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "navbar": "navbar-dark navbar-primary",
+    "sidebar": "sidebar-dark-primary",
+    "theme": "darkly",
+    "footer_fixed": True,
+    "actions_sticky_top": True,
+}
 
 
 MIDDLEWARE = [
