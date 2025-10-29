@@ -157,3 +157,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True  # for testing purposes
 # CORS_ALLOWED_ORIGINS = ["http://localhost:5173", "https://launchlab-site.vercel.app"]
+
+import os
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
